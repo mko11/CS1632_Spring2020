@@ -16,7 +16,14 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean returnCat(int id) {
-		// TODO
+		for (int i = 0;i<_cats.size();i++) {
+			if (id == _cats.get(i).getId()) {
+				if (_cats.get(i).getRented()) {
+					_cats.get(i).returnCat();
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 
@@ -31,7 +38,14 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean rentCat(int id) {
-		// TODO
+		for (int i = 0;i<_cats.size();i++) {
+			if (id == _cats.get(i).getId()) {
+				if (!_cats.get(i).getRented()) {
+					_cats.get(i).rentCat();
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 
@@ -46,8 +60,12 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public String listCats() {
-		// TODO
-		return "WRITE CODE FOR THIS";
+		String temp = "";
+		for (int i = 0; i<_cats.size();i++) {
+			if (!_cats.get(i).getRented())
+				temp = temp + _cats.get(i) + "\n";
+		}
+		return temp;
 	}
 
 	/**
@@ -59,8 +77,14 @@ public class RentACatImpl implements RentACat {
 	 * @return true if cat exists in list, false otherwise
 	 */
 
-	public boolean catExists(int id) {
-		// TODO
+	public boolean catExists(int id) { 
+		//why is this necessary its never called?
+		if(_cats.size() == 0) return false;
+		for (int i = 0; i<_cats.size(); i++) {
+			if (id == _cats.get(i).getId()) {
+				return true;
+			}
+		}
 		return false;
 	}
 
