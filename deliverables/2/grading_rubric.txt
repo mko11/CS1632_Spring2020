@@ -1,44 +1,45 @@
 Grading Rubric for D2
 
-* Summary and Testing Concerns - 5% of grade
+* GradeScope autograder: 70% of grade
 
-Valid testing concerns and ideas:    ____ / 3
+Autograder score:                    ____ / 70 
 
-Clearly written:                     ____ / 2
+This is the score you get from GradeScope source code autograder.
 
-* Screenshot of executed unit tests - 5% of grade
+* Tested a private method: 5% of grade
 
-Screenshot included of unit tests:   ____ / 5
+Tested a private method:             ____ / 5
 
-* Test coverage report - 10% of grade
+Use Java reflection as we learned during class.
+Review slides and textbook (Chap. 24) to refresh your memory.
 
-Screenshot included:                 ____ / 2
+* Source code style (name / formatting): 10% of grade
 
-Code coverage >= 80%                 ____ / 8
+Names are in lower camel case:       ____ / 5
 
-* Program Functionality & Quality - 40% of grade
+Formatting is uniform:               ____ / 5
 
-Relevant classes:                    ____ / 5
+* Code coverage: 15% of grade
 
-Testable OOP design:                 ____ / 10
+Coverage screenshot submitted:       ____ / 5
 
-Player can move N/S properly:        ____ / 5
+Must show coverage % of CoffeeMakerQuestImpl.
+Must show methods in CoffeeMakerQuestImpl.
 
-Player can look & check inventory:   ____ / 5
+Coverage exceeds 80%:                ____ / 10
 
-Player can ask for help:             ____ / 5
+This number pertains to the CoffeeMakerQuestImpl class only,
+not CoffeeMakerQuestImpl.java including the Item enum.
 
-Player can drink and win/lose:       ____ / 5
-
-Rooms display correctly:             ____ / 5
-
-* Test Code - 40% of grade
-
-At least 3 test doubles:             ____ / 15
-
-At least 3 stubs:                    ____ / 15
-
-Comments included & descriptive:     ____ / 10
+If 80% <= coverage <= 100%, 10 points
+If 70% <= coverage < 80%, 8 points
+If 60% <= coverage < 70%, 7 points
+If 50% <= coverage < 60%, 6 points
+If 40% <= coverage < 50%, 5 points
+If 30% <= coverage < 40%, 4 points
+If 20% <= coverage < 30%, 3 points
+If 10% <= coverage < 20%, 2 points
+If 0% <= coverage < 10%, 1 points
 
 ***
 
