@@ -259,6 +259,9 @@ public class RentACatTest {
 		_r.addCat(_c2);
 		_r.addCat(_c3);
 		Mockito.when(_c2.getRented()).thenReturn(true);
+		Mockito.verify(_c1, Mockito.times(0)).rentCat();
+		Mockito.verify(_c2, Mockito.times(0)).rentCat();
+		Mockito.verify(_c3, Mockito.times(0)).rentCat();
 		assertFalse(_r.rentCat(2));
 	}
 
@@ -293,9 +296,14 @@ public class RentACatTest {
 		_r.addCat(_c1);
 		_r.addCat(_c2);
 		_r.addCat(_c3);
-		Mockito.when(_r.getCat(2).getRented()).thenReturn(true);
+		Mockito.when(_c2.getRented()).thenReturn(true);
 		assertTrue(_r.returnCat(2));
-
+		Mockito.verify(_c1, Mockito.times(0)).returnCat();
+		Mockito.verify(_c2, Mockito.times(1)).returnCat();
+		Mockito.verify(_c3, Mockito.times(0)).returnCat();
 
 	}
 }
+
+
+
